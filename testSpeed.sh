@@ -65,6 +65,12 @@ fi
 
 }
 
+setUpDB()
+{
+	touch $WORKINGDIR/results.db
+	sqlite3 $WORKINGDIR/results.db < $WORKINGDIR/speedtest.sql
+}
+
 
 function runTests()
 {
@@ -149,6 +155,7 @@ function runIt()
 # Run it
 checkBrew
 checkSpeedtest
+setUpDB
 runIt
 
 

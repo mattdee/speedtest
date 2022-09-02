@@ -1,7 +1,7 @@
 /* Track speedtest results */
 /* SQLite3 database */
 
-CREATE TABLE results(
+CREATE TABLE if not exists results(
   "Server ID" TEXT,
   "Sponsor" TEXT,
   "Server Name" TEXT,
@@ -14,7 +14,7 @@ CREATE TABLE results(
   "IP Address" TEXT
 );
 
-CREATE VIEW data as
+CREATE VIEW if not exists data as
     select
         rowid,
         *,
