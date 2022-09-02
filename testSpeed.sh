@@ -67,6 +67,7 @@ fi
 
 setUpDB()
 {
+	echo "Database maintenance..."
 	touch $WORKINGDIR/results.db
 	sqlite3 $WORKINGDIR/results.db < $WORKINGDIR/speedtest.sql
 }
