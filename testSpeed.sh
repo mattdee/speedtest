@@ -108,6 +108,7 @@ sqlite3 $WORKINGDIR/results.db<<EOF
 EOF
 }
 
+
 function fileCheck()
 {
 	if [[ -s $WORKINGDIR/results.$RUNTIME ]]
@@ -126,14 +127,6 @@ function fileCheck()
 }
 
 
-function loadResults()
-{
-sqlite3 $WORKINGDIR/results.db<<EOF
-.mode csv
-.import $WORKINGDIR/results.$RUNTIME results
-.quit
-EOF
-}
 
 function cleanUp()
 {
@@ -145,10 +138,10 @@ function cleanUp()
 function runIt()
 {
 	runTests
-	getCurrentID
+	#getCurrentID
 	fileCheck
-	#loadResults this is called from fileCheck
-	getNewID
+	#loadResults #sthis is called from fileCheck
+	#getNewID
 	cleanUp
 }
 
