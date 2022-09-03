@@ -77,7 +77,7 @@ function runTests()
 {
 	echo "Testing internets speed, please be patient..."
 	#nohup /usr/local/bin/speedtest --csv >>$WORKINGDIR/results.$RUNTIME &>/dev/null &
-	time /usr/local/bin/speedtest --csv >>$WORKINGDIR/results.$RUNTIME
+	/usr/local/bin/speedtest --csv >>$WORKINGDIR/results.$RUNTIME &
 	/usr/local/bin/speedtest
 }
 
