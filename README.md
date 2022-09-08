@@ -1,5 +1,5 @@
 # speedtest
 
-### quick internet speed tesing and tracking
+### quick internet speed testing and tracking
 
 #### To use run testSpeed.sh
